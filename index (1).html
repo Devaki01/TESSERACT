@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zero-Trust CA Console (simulation)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=JetBrains+Mono&display=swap">
+<link rel="stylesheet" href="style.css"></head><body>
+<header>
+  <div><h1>Zero-Trust CA console</h1><div class="sub">Simulation with dummy data. No real keys or certificates exist here.</div></div>
+  <div class="row" style="margin:0">
+    <span id="hsm" class="tag t-bad">SoftHSM sealed</span>
+    <span class="sub">Unseal (3 of 5 key holders):</span>
+    <span class="sh" id="shares"></span>
+  </div>
+</header>
+<div class="pipe" id="pipe"></div>
+<main>
+  <section><h2>Issuance queue</h2><div id="queue"></div></section>
+  <div style="display:grid;gap:12px;align-content:start;min-width:0">
+    <section><div class="stats" id="stats"></div><div id="detail"></div></section>
+    <section><h2>Issued certificates <span class="sub">(1 real second = 1 simulated minute)</span></h2>
+      <div style="overflow-x:auto"><table><thead><tr><th>Serial</th><th>Subject</th><th>Lifetime</th><th>Remaining</th><th>OCSP staple</th><th></th></tr></thead><tbody id="certs"></tbody></table></div></section>
+  </div>
+  <section><h2>Tamper-evident audit log</h2>
+    <div class="row">
+      <button id="vfy">Verify chain</button><button id="tmp">Tamper with entry</button>
+    </div>
+    <div class="row"><span class="sub">Attack drills:</span>
+      <button id="a1">DMZ shell to HSM</button><button id="a2">Forged approval</button><button id="a3">Rogue issuance</button></div>
+    <div class="log" id="log"></div></section>
+</main>
+<div id="toast"></div>
+<script src="app.js"></script></body></html>
