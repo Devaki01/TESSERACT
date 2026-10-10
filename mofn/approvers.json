@@ -1,0 +1,10 @@
+{
+  "threshold": 3,
+  "approvers": {
+    "approver1": "R9zhf9B0supurLEC3kwuPp6Y9dgM5UkPm+eJfejRkOs=",
+    "approver2": "ESOuQx3wz2Pm6lMPHwBW9VFXZrWE1R1QWPOpC3SjTQQ=",
+    "approver3": "qwoEAr4yHH6ZDcNGsg53byyLrt11b0dmtCyOqvjogIQ=",
+    "approver4": "lV8Qth0/cBVlbyLXY13oVJvBL2b9FdvmUvINU2IR71Q=",
+    "approver5": "EwJm71mSpp4SCijYTj1HQoIXiQ0yHDRCvhCjI90oTsY="
+  }
+}

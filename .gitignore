@@ -1,0 +1,25 @@
+# ---- SECRETS: never commit ----
+mofn/keys/
+*.key
+*.pem.key
+root-hsm/
+issuing-hsm/
+*.tar.gz
+*.gpg
+root.conf
+issuing.conf
+.env
+*.pin
+stolen*.key
+naive-ca.key
+
+# ---- runtime state ----
+mofn/signer_state.db
+mofn/audit.log
+*.db
+certs/*.srl
+
+# ---- environment / junk ----
+venv/
+__pycache__/
+*.pyc
